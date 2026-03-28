@@ -201,11 +201,10 @@ require «observer-nonexhaustability» from git
   Reflexive Development Law: refine | shift regime | reconfigure.
   Adequacy Burden Relocation across architecture casts.
 
-  NOTE: This repo does not yet have a public GitHub remote. Using local path.
-  TODO: push to GitHub and update to git+hash require.
 -/
-require «reflexive-architecture-nonexhaustibility-lean» from
-  "/Users/nova/Reflexive-Architecture-Nonexhaustibility/reflexive-architecture-nonexhaustibility-lean"
+require «reflexive-architecture-nonexhaustibility-lean» from git
+  "https://github.com/novaspivack/reflexive-architecture-non-exhaustibility-lean.git"
+  @ "bc8d1649a9834bbde40e96d99c6329e82fb9a58a"
 
 /-! ### Master library targets -/
 
