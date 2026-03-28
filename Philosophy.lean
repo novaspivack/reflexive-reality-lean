@@ -2,7 +2,7 @@
 # Philosophy.lean — Formally Verified Philosophical Claims
 
 This file provides named aliases for the key theorems underlying each major
-philosophical claim in Paper 86 ("Reflexive Primordialism: A Philosophical
+philosophical claim in Paper 86 ("Reflexive Reality: A Philosophical
 Exposition", Paper 86 of the NEMS Suite, Nova Spivack, 2026).
 
 Every `theorem` or `def` below is either:
@@ -32,7 +32,7 @@ The theorem names below correspond to those citations.
 
 -/
 
-import ReflexivePrimordialism
+import ReflexiveReality
 
 namespace Philosophy
 
@@ -342,6 +342,6 @@ theorem TheGoldenBridge := @GoldenBridge.golden_bridge_theorem
     This theorem is witnessed by the elaboration of this entire file:
     if `lake build Philosophy` succeeds, the complete formal philosophy
     has been machine-verified. -/
-theorem ReflexivePrimordialismIsCompletelyFormallyVerified : True := trivial
+theorem ReflexiveRealityIsCompletelyFormallyVerified : True := trivial
 
 end Philosophy

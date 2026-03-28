@@ -1,13 +1,13 @@
-# reflexive-primordialism-lean
+# reflexive-reality-lean
 
 **The first complete formally machine-verified philosophy.**
 
-This package unifies every Lean 4 library in the Reflexive Primordialism
+This package unifies every Lean 4 library in the Reflexive Reality
 research program — 13 libraries, ~750 source files, all machine-verified
 with zero `sorry` — into a single buildable package. It accompanies
 Paper 86 of the NEMS Suite:
 
-> *Nova Spivack, "Reflexive Primordialism: A Philosophical Exposition,"
+> *Nova Spivack, "Reflexive Reality: A Philosophical Exposition,"
 > Paper 86 of the NEMS Suite, 2026.*
 
 Running `lake build` formally verifies every philosophical claim in that paper.
@@ -67,8 +67,8 @@ See [`Philosophy.lean`](Philosophy.lean) for the complete named-theorem index.
 
 ```bash
 # 1. Clone this repo
-git clone https://github.com/novaspivack/reflexive-primordialism-lean
-cd reflexive-primordialism-lean
+git clone https://github.com/novaspivack/reflexive-reality-lean
+cd reflexive-reality-lean
 
 # 2. Resolve all dependencies (downloads ~13 libraries via their pinned git hashes)
 lake update
@@ -136,9 +136,9 @@ All libraries unified on `leanprover/lean4:v4.29.0-rc6` with
 ## Citation
 
 ```
-Nova Spivack. "Reflexive Primordialism: A Philosophical Exposition."
+Nova Spivack. "Reflexive Reality: A Philosophical Exposition."
 Paper 86 of the NEMS Suite. 2026.
 
-Nova Spivack. reflexive-primordialism-lean.
-https://github.com/novaspivack/reflexive-primordialism-lean. 2026.
+Nova Spivack. reflexive-reality-lean.
+https://github.com/novaspivack/reflexive-reality-lean. 2026.
 ```

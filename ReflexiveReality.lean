@@ -1,14 +1,14 @@
 /-!
-# ReflexivePrimordialism — Master Import Manifest
+# ReflexiveReality — Master Import Manifest
 
-This file imports every library in the Reflexive Primordialism research program
+This file imports every library in the Reflexive Reality research program
 in dependency order. Successfully elaborating this file means every theorem
-in every paper cited in Paper 86 ("Reflexive Primordialism: A Philosophical
+in every paper cited in Paper 86 ("Reflexive Reality: A Philosophical
 Exposition") has been machine-verified by Lean 4.
 
 ## The complete program
 
-After `lake build ReflexivePrimordialism`, Lean has verified:
+After `lake build ReflexiveReality`, Lean has verified:
 - ~750 source files across 13 libraries
 - Zero `sorry` in any theorem
 - The complete chain from closure axioms to physical laws to consciousness to ground

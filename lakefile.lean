@@ -2,14 +2,14 @@ import Lake
 open Lake DSL
 
 /-!
-# reflexive-primordialism-lean
+# reflexive-reality-lean
 
 **The first complete formally machine-verified philosophy.**
 
-This package unifies every Lean library in the Reflexive Primordialism research
+This package unifies every Lean library in the Reflexive Reality research
 program — the NEMS Suite (Papers 1–85), the UGP program, and the seven subsequent
 arcs — into a single buildable package. Running `lake build` verifies all theorems
-cited in Paper 86 ("Reflexive Primordialism: A Philosophical Exposition").
+cited in Paper 86 ("Reflexive Reality: A Philosophical Exposition").
 
 ## What this verifies
 
@@ -48,7 +48,7 @@ public GitHub push — see comments below.
 All libraries unified on leanprover/lean4:v4.29.0-rc6
 -/
 
-package «reflexive-primordialism» where
+package «reflexive-reality» where
   version := v!"0.1.0"
   description := "The first complete formally machine-verified philosophy"
 
@@ -209,13 +209,13 @@ require «reflexive-architecture-nonexhaustibility-lean» from git
 /-! ### Master library targets -/
 
 /--
-  ReflexivePrimordialism: the master import manifest.
+  ReflexiveReality: the master import manifest.
   Imports every library in dependency order.
-  After `lake build ReflexivePrimordialism`, all ~750 source files are verified.
+  After `lake build ReflexiveReality`, all ~750 source files are verified.
 -/
 @[default_target]
-lean_lib «ReflexivePrimordialism» where
-  roots := #[`ReflexivePrimordialism]
+lean_lib «ReflexiveReality» where
+  roots := #[`ReflexiveReality]
 
 /--
   Philosophy: named philosophical theorem aliases.
