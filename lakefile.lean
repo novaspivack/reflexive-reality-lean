@@ -68,7 +68,7 @@ require aps_recursion_composition_uniformity_lean from git
 
 require aps_recursion_uniformization_lean from git
   "https://github.com/novaspivack/aps-recursion-uniformization-lean.git"
-  @ "49f4682c213646935e6dd08f0e66425b71c07f45"
+  @ "f5566e70b56a8c5b087625219379bd23c3ca517d"
 
 /-- Rice's theorem and halting undecidability (dep of ugp-lean) -/
 require APS from git
@@ -177,7 +177,7 @@ require «reflexive-architecture» from git
 -/
 require «adequacy-architecture» from git
   "https://github.com/novaspivack/adequacy-architecture-lean.git"
-  @ "d6fae984a04ba59cead4011a7107e6b4e84bf2f7"
+  @ "b5353cd48e1ced3a68530f4c737b516e032a4d3d"
 
 /-! ### Observer Non-Exhaustibility — complete route classification -/
 
@@ -189,7 +189,7 @@ require «adequacy-architecture» from git
 -/
 require «observer-nonexhaustability» from git
   "https://github.com/novaspivack/observer-non-exhaustability-lean.git"
-  @ "6d75f08bfdbed509555f5674da04be19d040a55f"
+  @ "051c7dd"
 
 /-! ### General Science of Reflexive Systems — RDL and aftermath -/
 
