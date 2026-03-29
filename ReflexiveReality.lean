@@ -161,3 +161,23 @@ import AdequacyArchitecture
 -- Three obstruction interfaces. Barriered Anchored Completion Impossible.
 -- Structured Aftermath. Reflexive Development Law (refine | shift regime | reconfigure).
 import ReflexiveArchitectureNonexhaustibilityLean
+
+-- ============================================================
+-- Portal modules: audience-specific alias surfaces
+-- ============================================================
+
+-- Paper 86 (Philosophy portal): alias surface for philosophical claims
+import Philosophy
+
+-- Paper 87 (Formal Theory portal): alias surface for formal-theory claims
+import FormalTheory
+
+-- Paper 88 (Physics portal): alias surface for physics claims
+import Physics
+
+-- Paper 89 (AI/Agents portal): alias surface for AI/agents claims
+import AIAgents
+
+-- Paper 92 (Consciousness, Phenomenology, and Mind portal):
+-- alias surface for consciousness, qualia, awareness, and phenomenology claims
+import ConsciousnessMind

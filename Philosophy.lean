@@ -76,6 +76,26 @@ theorem RepresentationalIncompletenessSummit :=
     (architectural transition) is not an iterate. -/
 theorem FoldIsNotAnIterate := @ReflectiveFoldObstruction.fold_obstruction
 
+/-- [RP-RFO, SPEC_020] Turing-completeness does not imply semantic-type completeness.
+    A system may be Turing-complete and still be permanently type-bounded: its
+    primitive dynamics can preserve predicates making certain semantic types
+    internally unreachable. The type-reachability preorder is nontrivial. -/
+theorem TuringCompleteNotSemanticTypeComplete :=
+  @ReflectiveFoldObstruction.SemanticType.semanticType_preorder_nontrivial
+
+/-- [RP-RFO, SPEC_020] Simulation is not realization. Type reachability is equivalent
+    between a simulation and its pullback only when the simulation admits a section
+    with backward step-lifting. Without such a section, a Turing-complete system can
+    simulate a richer-type system without itself instantiating that type. -/
+theorem SimulationIsNotRealization :=
+  @ReflectiveFoldObstruction.SemanticType.typeReachable_pullback_iff_of_section
+
+/-- [RP-RFO, SPEC_020] Adjudication type obstruction: a total-effective adjudication
+    type cannot iterate to a non-total-effective type. Applied to awareness: simulating
+    awareness does not realize the awareness-locus semantic type. -/
+theorem AdjudicationTypeObstruction :=
+  @ReflectiveFoldObstruction.SemanticType.adjudication_semantic_obstruction
+
 -- ============================================================
 -- §6–7 — Why there is something rather than nothing
 -- ============================================================
