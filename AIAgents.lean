@@ -60,7 +60,7 @@ theorem SelfAwarenessHierarchyBarrier :=
 /-- [RP-RI] Representational Incompleteness: scaling a self-model cannot eliminate
     the structural blind spot. No arithmetic or computability assumption required. -/
 theorem ScalingDoesNotFixSelfModelBlindSpot :=
-  @RepresentationalIncompleteness.diagonal_exclusion
+  @RepresentationalIncompleteness.representational_incompleteness
 
 -- ============================================================
 -- Part II — What a Genuine Agent Is [P17, P59, P73]

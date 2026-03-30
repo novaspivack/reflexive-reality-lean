@@ -65,7 +65,7 @@ theorem HardProblemDissolvedTheorem := @QualiaLedger.hard_problem_category_error
 /-- [P53] No purely syntactic internal structure can totally and exactly exhaust
     the realized semantics of a sufficiently expressive reflexive system. -/
 theorem SyntaxCannotExhaustSemantics :=
-  @SyntaxSemantics.syntax_cannot_exhaust_semantics
+  @SyntaxSemantics.no_syntactic_semantic_exhaustion
 
 -- ============================================================
 -- Part II — Alpha-grounding and manifestation [P65, P66]
@@ -164,7 +164,7 @@ theorem MinimalTernaryClosureForm :=
     f : B → B, the diagonal function λa. f(s a a) is never a row of s. Scaling a
     self-model does not close this structural blind spot. -/
 theorem RepresentationalIncompletenessSummit :=
-  @RepresentationalIncompleteness.diagonal_exclusion
+  @RepresentationalIncompleteness.representational_incompleteness
 
 /-- [RP-RFO] A genuine fold (architecture-changing transition) is not an iterate.
     If an invariant I is preserved along every primitive step, it is preserved

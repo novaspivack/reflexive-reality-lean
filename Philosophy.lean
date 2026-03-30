@@ -63,13 +63,13 @@ theorem MasterDiagonalBarrier := @SelfReference.master_diagonal_barrier
 
 /-- [P53] Syntax cannot exhaust semantics: no purely syntactic structure can
     exhaustively capture realized semantic truth. -/
-theorem SyntaxCannotExhaustSemantics := @SyntaxSemantics.syntax_cannot_exhaust_semantics
+theorem SyntaxCannotExhaustSemantics := @SyntaxSemantics.no_syntactic_semantic_exhaustion
 
 /-- [RP-RI] Representational Incompleteness: for any self-model s : A → A → B and
     any fixed-point-free f : B → B, the diagonal λa. f(s a a) is not in the range
     of s. Holds for any type, with no arithmetic or computability assumption. -/
 theorem RepresentationalIncompletenessSummit :=
-  @RepresentationalIncompleteness.diagonal_exclusion
+  @RepresentationalIncompleteness.representational_incompleteness
 
 /-- [RP-RFO] Reflective Fold Obstruction: if predicate I is preserved by every
     primitive internal step, it is preserved by all internal closure. A fold

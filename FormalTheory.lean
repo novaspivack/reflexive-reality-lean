@@ -82,13 +82,13 @@ theorem DirectNoFinalSelfTheory :=
 /-- [P53] Syntax cannot exhaust semantics: no syntactic internal structure can be
     total and exact for realized semantic truth. -/
 theorem SyntaxCannotExhaustSemantics :=
-  @SyntaxSemantics.syntax_cannot_exhaust_semantics
+  @SyntaxSemantics.no_syntactic_semantic_exhaustion
 
 /-- [RP-RI] Representational Incompleteness: for any parametric self-model
     s : A → A → B and fixed-point-free f : B → B, λa. f(s a a) is never a row of s.
     No arithmetic or computability hypothesis required. -/
 theorem RepresentationalIncompletenessSummit :=
-  @RepresentationalIncompleteness.diagonal_exclusion
+  @RepresentationalIncompleteness.representational_incompleteness
 
 /-- [RP-RFO] Fold is not an iterate: invariant preservation under reflexive-transitive
     closure. Architectural transitions cannot be reached by internal iteration. -/
