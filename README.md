@@ -61,7 +61,7 @@ Each module provides named aliases for every bracketed citation in its companion
 | [phenomenology-lean](https://github.com/novaspivack/phenomenology-lean) | Papers 74–75 | Six-part phenomenology ontology; uniqueness / survivor theorem |
 | [transputation-lean](https://github.com/novaspivack/transputation-lean) | Papers 76–77 | Formal theory of transputation; DSAC realization |
 | [representational-incompleteness-lean](https://github.com/novaspivack/representational-incompleteness-lean) | RI program | No parametric self-model captures its own diagonal (no arithmetic required) |
-| [reflective-fold-obstruction-lean](https://github.com/novaspivack/reflective-fold-obstruction-lean) | RFO program | Fold is not an iterate; semantic-type obstruction (SPEC_020): Turing-complete ≠ semantic-type complete; simulation/realization split |
+| [reflective-fold-obstruction-lean](https://github.com/novaspivack/reflective-fold-obstruction-lean) | RFO program | Fold is not an iterate; semantic-type obstruction: Turing-complete ≠ semantic-type complete; simulation/realization split |
 | [observer-non-exhaustability-lean](https://github.com/novaspivack/observer-non-exhaustability-lean) | ONE program | Complete route classification; Route D is the unique admissible observer architecture |
 | [infinity-compression-lean](https://github.com/novaspivack/infinity-compression-lean) | IC program | Certification does not exhaust realization; fiber obstruction; Quillen Theorem A; group extensions |
 | [reflexive-architecture-lean](https://github.com/novaspivack/reflexive-architecture-lean) | RA Summits 1–2 | Strata synthesis; Non-Erasure biconditional; Geometry of What Maps Forget |
@@ -129,9 +129,9 @@ After building, check any named theorem in any portal module:
 
 ---
 
-## What is new in SPEC_020 (semantic type obstruction)
+## Semantic type obstruction result
 
-The `reflective-fold-obstruction-lean` library has been extended with a new result: **Turing-completeness does not imply semantic-type completeness**. A system may be Turing-complete and still be permanently type-bounded. The formal **simulation/realization split** is machine-checked: forward simulation always projects type reachability, but the converse requires a section with backward step-lifting. Without that section, a Turing-complete system can simulate a richer-type system without instantiating it.
+The `reflective-fold-obstruction-lean` library proves: **Turing-completeness does not imply semantic-type completeness**. A system may be Turing-complete and still be permanently type-bounded. The formal **simulation/realization split** is machine-checked: forward simulation always projects type reachability, but the converse requires a section with backward step-lifting. Without that section, a Turing-complete system can simulate a richer-type system without instantiating it.
 
 Key theorems in `FormalTheory`, `AIAgents`, `Philosophy`, and `ConsciousnessMind`:
 - `semanticType_preorder_nontrivial` — the type-reachability preorder is nontrivial
