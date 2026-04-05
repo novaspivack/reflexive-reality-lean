@@ -167,3 +167,6 @@ All libraries unified on `leanprover/lean4:v4.29.0-rc6` with `mathlib4 @ v4.29.0
 Nova Spivack. "Reflexive Reality: Capstone Series (Papers 86–92)." NEMS Suite, 2026.
 Nova Spivack. reflexive-reality-lean. https://github.com/novaspivack/reflexive-reality-lean. 2026.
 ```
+<!-- NOVA_ZPO_ZENODO_SOFTWARE_BEGIN -->
+**Archival software (Zenodo):** https://doi.org/10.5281/zenodo.19429231
+<!-- NOVA_ZPO_ZENODO_SOFTWARE_END -->
