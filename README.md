@@ -1,5 +1,23 @@
 # reflexive-reality-lean
 
+
+## Research Program
+
+This repository is part of the **Reflexive Reality** research program by [Nova Spivack](https://www.novaspivack.com/).
+
+**What this formalizes:** Reflexive Reality (foundational Lean scaffold): early machine-checked bridge between NEMS closure theorems and the Reflexive Reality framework.
+
+| Link | Description |
+|------|-------------|
+| [Research page](https://www.novaspivack.com/research/) | Full index of all papers, programs, and Lean archives |
+| [Full abstracts](https://novaspivack.github.io/research/abstracts/#abs-b1-nems) | Complete abstract for this library's papers |
+| [Zenodo program hub](https://doi.org/10.5281/zenodo.19429270) | Citable DOI hub for the NEMS program |
+
+All results are machine-checked in Lean 4 with a zero-sorry policy on proof targets.
+See [MANIFEST.md](MANIFEST.md) for the sorry audit (if present).
+
+---
+
 **The first complete formally machine-verified philosophy — now with five audience-specific verification portals.**
 
 This package unifies every Lean 4 library in the Reflexive Reality research program — 13 libraries, ~750 source files, all machine-verified with zero `sorry` — into a single buildable package. It accompanies the Reflexive Reality capstone paper series (Papers 86–92 of the NEMS Suite):
