@@ -53,27 +53,24 @@ package «reflexive-reality» where
   description := "The first complete formally machine-verified philosophy"
 
 /-! ### Mathlib — declare first so its cache hash wins -/
-require mathlib from git
-  "https://github.com/leanprover-community/mathlib4.git" @ "v4.29.0-rc6"
-
 /-! ### APS supporting libraries (deps of ugp-lean and adequacy-architecture) -/
 
 require aps_undecidability_interfaces_lean from git
   "https://github.com/novaspivack/aps-undecidability-interfaces-lean.git"
-  @ "e71766e41b0e97b93d5c36d7c0994fdbfc01cb83"
+  @ "main"
 
 require aps_recursion_composition_uniformity_lean from git
   "https://github.com/novaspivack/aps-recursion-composition-uniformity-lean.git"
-  @ "2d075bd71c14fe57105d362c8c3b5c43deeda3fe"
+  @ "main"
 
 require aps_recursion_uniformization_lean from git
   "https://github.com/novaspivack/aps-recursion-uniformization-lean.git"
-  @ "f5566e70b56a8c5b087625219379bd23c3ca517d"
+  @ "main"
 
 /-- Rice's theorem and halting undecidability (dep of ugp-lean) -/
 require APS from git
   "https://github.com/novaspivack/aps-rice-lean.git"
-  @ "368cf90ef0a07d96feb88dfd4915aa4e7f6e4389"
+  @ "main"
 
 /-! ### Core NEMS spine — Papers 1–51 + schema programs -/
 
@@ -85,7 +82,7 @@ require APS from git
 -/
 require «nems-lean» from git
   "https://github.com/novaspivack/nems-lean.git"
-  @ "d1379b2d6d01b1c652ae65b65e1fab97b9b6b6b3"
+  @ "main"
 
 /-! ### UGP — Universal Generative Principle (Paper 25 + physics derivations) -/
 
@@ -96,7 +93,7 @@ require «nems-lean» from git
 -/
 require «ugp-lean» from git
   "https://github.com/novaspivack/ugp-lean.git"
-  @ "be13880153164bac2536d097ddc2d0a7e7433bc7"
+  @ "main"
 
 /-! ### Reflexive Closure arc — Papers 52–70 (consciousness, Alpha, Golden Bridge) -/
 
@@ -109,7 +106,7 @@ require «ugp-lean» from git
 -/
 require «reflexive-closure-lean» from git
   "https://github.com/novaspivack/reflexive-closure-lean.git"
-  @ "d8a169dc0d3ee80e031b9daa0b7d803ffcb26d4b"
+  @ "main"
 
 /-! ### Viable Continuation — Papers 71–72 -/
 
@@ -119,7 +116,7 @@ require «reflexive-closure-lean» from git
 -/
 require «viable-continuation-lean» from git
   "https://github.com/novaspivack/viable-continuation-lean.git"
-  @ "7d163bf06266a60183dacb72aec95a883aaeb49a"
+  @ "main"
 
 /-! ### Infinity Compression — Reflective Non-Exhaustion Summit -/
 
@@ -129,7 +126,7 @@ require «viable-continuation-lean» from git
 -/
 require «infinity-compression» from git
   "https://github.com/novaspivack/infinity-compression-lean.git"
-  @ "3623c6bff15741ef3796d3901b378dabed18194e"
+  @ "main"
 
 /-! ### Representational Incompleteness — no self-model captures its own diagonal -/
 
@@ -142,7 +139,7 @@ require «infinity-compression» from git
 -/
 require «representational-incompleteness» from git
   "https://github.com/novaspivack/representational-incompleteness-lean.git"
-  @ "1595fac306defa05c085b75c23de82f149b39476"
+  @ "main"
 
 /-! ### Reflective Fold Obstruction — a fold is not an iterate -/
 
@@ -152,7 +149,7 @@ require «representational-incompleteness» from git
 -/
 require «reflective-fold-obstruction-lean» from git
   "https://github.com/novaspivack/reflective-fold-obstruction-lean.git"
-  @ "f29978e49994f59b10c0decaa8a02ea423d05afb"
+  @ "main"
 
 /-! ### Reflexive Architecture — Strata synthesis + Geometry of What Maps Forget -/
 
@@ -166,7 +163,7 @@ require «reflective-fold-obstruction-lean» from git
 -/
 require «reflexive-architecture» from git
   "https://github.com/novaspivack/reflexive-architecture-lean.git"
-  @ "1dc9b05915832f88d378bd7813db9e43dab2c019"
+  @ "main"
 
 /-! ### Adequacy Architecture — three-level certificate world -/
 
@@ -177,7 +174,7 @@ require «reflexive-architecture» from git
 -/
 require «adequacy-architecture» from git
   "https://github.com/novaspivack/adequacy-architecture-lean.git"
-  @ "b5353cd48e1ced3a68530f4c737b516e032a4d3d"
+  @ "main"
 
 /-! ### Observer Non-Exhaustibility — complete route classification -/
 
@@ -204,7 +201,10 @@ require «observer-nonexhaustability» from git
 -/
 require «reflexive-architecture-nonexhaustibility-lean» from git
   "https://github.com/novaspivack/reflexive-architecture-non-exhaustibility-lean.git"
-  @ "bc8d1649a9834bbde40e96d99c6329e82fb9a58a"
+  @ "main"
+
+require mathlib from git
+  "https://github.com/leanprover-community/mathlib4.git" @ "v4.29.1"
 
 /-! ### Master library targets -/
 

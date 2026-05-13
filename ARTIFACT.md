@@ -1,8 +1,8 @@
 # reflexive-reality-lean — Artifact Documentation
 
 **Version:** v1.5.0  
-**Lean:** leanprover/lean4:v4.29.0-rc6  
-**Mathlib:** v4.29.0-rc6  
+**Lean:** leanprover/lean4:v4.29.1  
+**Mathlib:** v4.29.1  
 **Build:** `lake build ReflexiveReality` — succeeds with 0 errors on the portal alias modules  
 **Sorry status:** 0 sorry in portal alias modules (Philosophy, FormalTheory, Physics, AIAgents, ConsciousnessMind). Sorry accounting for underlying libraries: see per-library MANIFEST.md files (all primary theorem chains cited in portal papers carry 0 sorry per their manifests).  
 **Custom axioms:** 0 in all portal alias modules and all primary theorem chains.

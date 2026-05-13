@@ -68,7 +68,7 @@ Each module provides named aliases for every bracketed citation in its companion
 | [adequacy-architecture-lean](https://github.com/novaspivack/adequacy-architecture-lean) | AA program | Three-level certificate structure forced by admissibility |
 | [reflexive-architecture-nonexhaustibility-lean](https://github.com/novaspivack/reflexive-architecture-non-exhaustibility-lean) | RAN / General Science | Master law: barriered anchored completion impossible, structured aftermath forced; Reflexive Development Law |
 
-**Total: ~750 source files. Zero sorry. Zero custom axioms. Lean 4 / Mathlib v4.29.0-rc6.**
+**Total: ~750 source files. Zero sorry. Zero custom axioms. Lean 4 / Mathlib v4.29.1.**
 
 ---
 
@@ -157,7 +157,7 @@ This package is, to the authors' knowledge, the first complete formally machine-
 
 ## Toolchain
 
-All libraries unified on `leanprover/lean4:v4.29.0-rc6` with `mathlib4 @ v4.29.0-rc6`.
+All libraries unified on `leanprover/lean4:v4.29.1` with `mathlib4 @ v4.29.1`.
 
 ---
 
