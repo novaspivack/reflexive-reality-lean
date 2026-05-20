@@ -7,8 +7,13 @@ import AlphaNonNull
 import UnifiedPresence
 import GoldenBridge
 import SemanticSelfDescription
+import SemanticSelfReference
+import SyntaxSemantics
 import ReflexiveClosure
 import ReflectiveFoldObstruction
+import Phenomenology.Meta.Uniqueness
+import Sentience.Classification.SeparationTheorems
+import Observer.Nonexhaustability.Theorems.Classification
 
 namespace ConsciousnessMind
 
@@ -20,7 +25,7 @@ namespace ConsciousnessMind
     can report, discriminate, remember, or self-model) must appear in the
     semantic ledger as irreducible semantic content. They cannot be reduced to
     purely syntactic structure. -/
-abbrev KnownQualiaOnLedger := @QualiaLedger.known_qualia_ledger_theorem
+abbrev KnownQualiaOnLedger := @QualiaLedger.known_qualia_on_ledger
 
 /-- [P55, Cor 55.6] The hard problem of consciousness, construed as demanding
     that pure syntax or computation generate qualia from outside the semantic
@@ -48,7 +53,8 @@ abbrev QualiaAreAlphaManifestations :=
 
 /-- [P66, non-collapse] Not everything that is Alpha-grounded is phenomenally
     manifested. Qualia are a typed subset of Alpha-grounded reality. -/
-abbrev NotEverythingRealIsPhenomenal := @GroundManifestation.non_collapse
+abbrev NotEverythingRealIsPhenomenal :=
+  @GroundManifestation.exists_alpha_grounded_not_manifestation
 
 -- ============================================================
 -- Part III — Awareness as locus [P67]
@@ -58,22 +64,23 @@ abbrev NotEverythingRealIsPhenomenal := @GroundManifestation.non_collapse
     Wherever there is phenomenal presence, there is a locus at which it is
     present. -/
 abbrev AlphaManifestationImpliesAwarenessLocus :=
-  @AwarenessGround.awareness_locus_existence
+  @AwarenessGround.manifestation_implies_presence_at_locus
 
 /-- [P67, T67.3] The awareness-locus is not object-level content. Searching for
     consciousness as one more item in the physical world is a category error. -/
 abbrev AwarenessIsNotAnObject :=
-  @AwarenessGround.awareness_not_object_level
+  @AwarenessGround.awareness_locus_not_object_level_content
 
 /-- [P67] Seeking the source of consciousness as a same-level worldly object is
     a category error: the locus is the condition of presence, not one more thing
     among those present. -/
 abbrev SearchingForConsciousnessInBrainIsACategoryError :=
-  @AwarenessGround.category_error_for_object_search
+  @AwarenessGround.awareness_locus_not_object_level_content
 
 /-- [P67, T67.6--7] The realized awareness-locus is self-illuminating. Awareness
     of awareness does not require a second same-level observer. -/
-abbrev AwarenessIsSelfIlluminating := @AwarenessGround.self_illuminating
+abbrev AwarenessIsSelfIlluminating :=
+  @AwarenessGround.awareness_locus_self_illuminating
 
 -- ============================================================
 -- Part IV — Alpha: not null, not sterile, not inert [P68]
@@ -81,7 +88,7 @@ abbrev AwarenessIsSelfIlluminating := @AwarenessGround.self_illuminating
 
 /-- [P68] Alpha is object-empty but not null, not semantically sterile, and not
     inert. Object-emptiness does not entail nullity. -/
-abbrev AlphaIsNonNull := @AlphaNonNull.alpha_not_null_thm
+abbrev AlphaIsNonNull := @AlphaNonNull.object_empty_and_not_null
 
 -- ============================================================
 -- Part V — Three aspects, one fact [P69, P70]
@@ -89,14 +96,14 @@ abbrev AlphaIsNonNull := @AlphaNonNull.alpha_not_null_thm
 
 /-- [P69.4] Ground, Articulation, and Manifestation-in-Awareness are three
     coordinated aspects of one primordial ontological fact. -/
-abbrev ThreeAspectCoordination := @UnifiedPresence.three_aspect_synthesis
+abbrev ThreeAspectCoordination := @UnifiedPresence.unified_three_aspects
 
 /-- [P70] The Golden Bridge: the final integrated theorem. Ground, Articulation,
     and Manifestation-in-Awareness are coordinated irreducible aspects of one
     primordial ontological fact. Dissolves the hard problem, the object-search
     for consciousness, Alpha-as-nullity, syntax-only exhaustivism, and
     world/awareness alienation. -/
-abbrev TheGoldenBridge := @GoldenBridge.golden_bridge_theorem
+abbrev TheGoldenBridge := @GoldenBridge.golden_bridge
 
 -- ============================================================
 -- Part VI — Observer non-self-exhaustion [P51, P54]
@@ -104,12 +111,12 @@ abbrev TheGoldenBridge := @GoldenBridge.golden_bridge_theorem
 
 /-- [P51] No sufficiently expressive reflexive system can internally contain a
     final, total, exact theory of its own realized semantics. -/
-abbrev NoFinalSelfTheory := @SemanticSelfDescription.no_final_self_theory
+abbrev NoFinalSelfTheory := @SemanticSelfReference.direct_no_final_self_theory
 
 /-- [P54] No reflexive observer can internally exhaust itself as a complete
     semantic object. -/
 abbrev ObserverCannotSelfExhaust :=
-  @ReflexiveClosure.no_self_exhausting_observer
+  @SemanticSelfReference.no_self_exhausting_observer
 
 /-- [P56] Reflexive closure is possible without collapse: a reflexive system may
     close over itself but cannot coincide with its own complete internal semantic
@@ -119,7 +126,7 @@ abbrev ClosureWithoutCollapse := @ReflexiveClosure.closure_without_collapse
 /-- [P56] The minimal stable closure form (self-return, partial articulation,
     irreducible reflexive distance) is ternary. -/
 abbrev MinimalTernaryClosureForm :=
-  @ReflexiveClosure.minimal_ternary_closure_form
+  @ReflexiveClosure.noncollapsing_reflexive_closure_minimally_ternary
 
 -- ============================================================
 -- Part VII — Representational and fold barriers [RP-RI, RP-RFO]
@@ -135,7 +142,8 @@ abbrev RepresentationalIncompletenessSummit :=
     If an invariant I is preserved along every primitive step, it is preserved
     along the full reflexive-transitive closure. You cannot reach the
     awareness-locus type by iterating within a type-bounded system. -/
-abbrev FoldIsNotAnIterate := @ReflectiveFoldObstruction.fold_obstruction
+abbrev FoldIsNotAnIterate :=
+  @ReflectiveFoldObstruction.Obstruction.ReflectiveFold.reflective_architecture_fold_obstruction
 
 /-- [RP-RFO, SPEC_020] The type reachability preorder on semantic types is
     nontrivial: there exist pairs (T, T') with no connecting internal chain,
