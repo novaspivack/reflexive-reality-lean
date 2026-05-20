@@ -1,5 +1,18 @@
 -- Physics.lean — Formally Verified Claims for the Physics Portal (Paper 88)
-import ReflexiveReality
+import NemS
+import InternalitySchema
+import ArrowOfTime
+import BlackHoles
+import CausalNonlocality
+import ChronologyUnderClosure
+import ErrorCorrectingClosure
+import FTLConstraints
+import GPTClosure
+import HolographyUnderClosure
+import RecordEntropy
+import ReflectiveFoldObstruction
+import SemanticNonlocality
+import Transputation.Theorems.ForcedAdjudication
 
 namespace Physics
 

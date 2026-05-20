@@ -64,8 +64,3 @@ import Observer.Nonexhaustability
 import ReflexiveArchitecture
 import AdequacyArchitecture
 import ReflexiveArchitectureNonexhaustibilityLean
-import Philosophy
-import FormalTheory
-import Physics
-import AIAgents
-import ConsciousnessMind
