@@ -5,8 +5,8 @@
 -- libraries (NEMS hub + sentience + phenomenology + transputation), zero sorry, and the
 -- complete chain from closure axioms to physical laws to consciousness to ground.
 import APS
-import APSUndecidabilityInterfaces
-import APSRecursionCompositionUniformity
+import APSMinimalInterface
+import APSRecComp
 import APSUniformization
 import NemS
 import Closure

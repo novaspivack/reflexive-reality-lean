@@ -10,7 +10,7 @@ namespace FormalTheory
 /-- [P26] Master Fixed-Point Theorem (MFP-1): for every F in the representable class,
     there exists a fixed point p ≃ F(quote(p)). Gödel, Kleene, Löb, and Tarski are
     instances of the same SRI interface. -/
-abbrev MasterDiagonalBarrier := @SelfReference.master_diagonal_barrier
+abbrev MasterDiagonalBarrier := @SelfReference.Consequences.no_total_decider
 
 /-- [P28] Diagonal Closure Theorem: if representability class R is diagonally closed,
     every F ∈ R has a mixed fixed point. Method-level separation when R is not
@@ -22,11 +22,11 @@ abbrev DiagonalClosureTheoremAndSeparation :=
     on the diagonal-capable fragment of a self-contained universe with stable records
     and universal computation. Zero custom axioms; reduction to Mathlib halting
     undecidability. -/
-abbrev PhysicalIncompleteness := @NemS.physical_incompleteness
+abbrev PhysicalIncompleteness := @NemS.Physical.physical_incompleteness
 
 /-- [P27] Selector-Quotient Splitting Equivalence: world-selectors are in canonical
     bijection with quotient selectors (sections of the world-type quotient map). -/
-abbrev SelectorQuotientSplittingEquiv := @Closure.selectorSectionEquiv
+abbrev SelectorQuotientSplittingEquiv := @NemS.Framework.selectorSectionEquiv
 
 -- ============================================================
 -- Part II — NEMS Model-Theoretic Classification [P02, P04]
@@ -35,11 +35,11 @@ abbrev SelectorQuotientSplittingEquiv := @Closure.selectorSectionEquiv
 /-- [P79] Foundational viability iff closure compatibility: the biconditional
     governing the first selection sieve on cosmological possibility space. -/
 abbrev FoundationalViabilityIffClosure :=
-  @NemS.foundational_iff_closure_compatible
+  @NemS.Cosmology.foundationally_viable_implies_closure_compatible
 
 /-- [P23] Foundational Finality: no external runner can ground a self-contained
     universe without violation, redundancy, or isomorphism. -/
-abbrev NoExternalRunner := @NemS.foundational_finality
+abbrev NoExternalRunner := @NemS.Reflexive.ReflexiveTheorySpace.foundational_finality
 
 -- ============================================================
 -- Part III — Three Independent Impossibility Engines
@@ -67,7 +67,8 @@ abbrev RepresentationalIncompletenessSummit :=
 
 /-- [RP-RFO] Fold is not an iterate: invariant preservation under reflexive-transitive
     closure. Architectural transitions cannot be reached by internal iteration. -/
-abbrev FoldIsNotAnIterate := @ReflectiveFoldObstruction.fold_obstruction
+abbrev FoldIsNotAnIterate :=
+  @ReflectiveFoldObstruction.Obstruction.ReflectiveFold.reflective_architecture_fold_obstruction
 
 /-- [RP-ONE] Observer Non-Exhaustibility: every internal reductive strategy falls
     into one of three blocked families. Route D is the unique admissible architecture. -/
@@ -85,7 +86,7 @@ abbrev GenericOutsourcingBarrier := @InternalitySchema.outsourcing_barrier
 /-- [P83] Fundamentality as Internal Completion: a framework is foundational iff
     it is observationally categorical or has an admissible internal selector. -/
 abbrev FundamentalityAsInternalCompletion :=
-  @Foundationality.foundational_iff_internal_completion
+  @InternalitySchema.foundational_iff_internal_completion
 
 /-- [P30] No total internal self-certifier: no diagonal-capable system admits a
     total internal self-certifier for any nontrivial extensional claim. -/
@@ -110,23 +111,23 @@ abbrev MonotoneCascadeTheorem := @SurvivorCalculus.residual_inclusion
 /-- [RP-IC] Canonical certification does not exhaust realization: structured residue
     persists in fibers above the certification level. -/
 abbrev CertificationDoesNotExhaustRealization :=
-  @InfinityCompression.reflective_non_exhaustion
+  @InfinityCompression.GeneralMethod.Summit.reflective_non_exhaustion_existential
 
 /-- [RP-RA] Universal Forgetting Theorem: for any map π : Real → Bare, residual
     kernels have complete-clique fiber geometry, kernel-observable duality, and
     chromatic resolution cost. -/
 abbrev UniversalForgettingTheorem :=
-  @ReflexiveArchitecture.universal_forgetting_theorem
+  @ReflexiveArchitecture.Universal.Residual.universal_fundamental_equivalence
 
 /-- [RP-RA] Non-Erasure Principle: NEMS semantic remainder iff IC enriched
     irreducibility. Representation does not erase the represented. -/
 abbrev RepresentationDoesNotEraseTheRepresented :=
-  @ReflexiveArchitecture.unified_non_erasure_law
+  @ReflexiveArchitecture.Bridge.universal_nonerasure_law
 
 /-- [RP-AA] Admissibility Unification: all routes to outer admissibility collapse
     to one gate. Three-level structure (gate, second layer, residual band) is forced. -/
 abbrev AdmissibilityUnificationTheorem :=
-  @AdequacyArchitecture.unification_theorem
+  @AdequacyArchitecture.Instances.program1FiniteGAdm_iff_program1AdmissibilityPullbackDisplayWitness
 
 -- ============================================================
 -- Part VI — Semantic Type Obstruction [RP-RFO, SPEC_020]
@@ -140,17 +141,17 @@ abbrev SemanticTypePreorderNontrivial :=
 /-- [RP-RFO, SPEC_020] Self-modeling depth obstruction: a depth-n system cannot
     iterate to depth n+1. -/
 abbrev SelfModelDepthObstruction :=
-  @ReflectiveFoldObstruction.SemanticType.selfModelDepth_obstruction
+  @ReflectiveFoldObstruction.SemanticType.Instances.SelfModelDepth.selfModelDepth_obstruction
 
 /-- [RP-RFO, SPEC_020] Adjudication type obstruction: total-effective adjudication
     cannot iterate to non-total-effective type. -/
 abbrev AdjudicationTypeObstruction :=
-  @ReflectiveFoldObstruction.SemanticType.adjudication_semantic_obstruction
+  @ReflectiveFoldObstruction.SemanticType.Instances.AdjudicationType.adjudication_semantic_obstruction
 
 /-- [RP-RFO, SPEC_020] RI diagonal as semantic type mismatch: the RI diagonal
     exclusion is a type mismatch, not a computational insufficiency. -/
 abbrev RISemanticTypeMismatch :=
-  @ReflectiveFoldObstruction.SemanticType.RI_semantic_type_mismatch
+  @ReflectiveFoldObstruction.SemanticType.Instances.RIDiagonal.RI_semantic_type_mismatch
 
 /-- [RP-RFO, SPEC_020] Simulation vs realization iff under section: type reachability
     is equivalent between simulation and pullback only when a section with backward
@@ -192,7 +193,7 @@ abbrev ArrowOfTimeFromClosure := @ArrowOfTime.closure_arrow_theorem
 /-- [P47] No spooky-to-signal compiler: EPR-style correlations cannot be
     total-effectively upgraded to controllable signaling. -/
 abbrev NoSpookyToSignalCompiler :=
-  @FTLConstraints.Theorems.NoCompiler.no_spooky_to_signal_compiler
+  @FTLConstraints.no_spooky_to_signal_compiler
 
 /-- [P48] Holography is a closure theorem; no total-effective boundary decoder
     for nontrivial bulk predicates on diagonal-capable fragments. -/
@@ -202,10 +203,10 @@ abbrev HolographyClosureTheorem :=
 /-- [RP-RAN] Reflexive Development Law: response to standing residual is lawfully
     one of refinement, regime shift, or bookkeeping reconfiguration. -/
 abbrev ReflexiveDevelopmentLaw :=
-  @ReflexiveArchitectureNonexhaustibilityLean.reflexive_development_law_standing_trilemma
+  @StructuredNonexhaustibility.reflexive_development_law_standing_trilemma
 
 /-- [RP-RAN] Barriered anchored completion impossible. -/
 abbrev AnchoredCompletionImpossible :=
-  @ReflexiveArchitectureNonexhaustibilityLean.barriered_anchored_completion_impossible
+  @StructuredNonexhaustibility.barriered_architecture_admits_no_true_honest_anchored_internal_completion
 
 end FormalTheory

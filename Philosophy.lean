@@ -10,11 +10,12 @@ namespace Philosophy
 /-- [P23] No load-bearing external runner exists. Any would-be external explanation
     of a self-contained universe either violates PSC, is redundant with the master
     loop, or is isomorphic to it. -/
-abbrev NoExternalRunner := @NemS.foundational_finality
+abbrev NoExternalRunner := @NemS.Reflexive.ReflexiveTheorySpace.foundational_finality
 
 /-- [P79] Closure compatibility is necessary and sufficient for foundational viability.
     The universe cannot be foundationally viable unless it is closure-compatible. -/
-abbrev FoundationalViabilityIffClosure := @NemS.foundational_iff_closure_compatible
+abbrev FoundationalViabilityIffClosure :=
+  @NemS.Cosmology.foundationally_viable_implies_closure_compatible
 
 -- ============================================================
 -- §3 — The Diagonal Barrier
@@ -22,11 +23,11 @@ abbrev FoundationalViabilityIffClosure := @NemS.foundational_iff_closure_compati
 
 /-- [P11] Physical Incompleteness: no total computable procedure decides all
     record-truth questions in a diagonal-capable self-contained universe. -/
-abbrev PhysicalIncompleteness := @NemS.physical_incompleteness
+abbrev PhysicalIncompleteness := @NemS.Physical.physical_incompleteness
 
 /-- [P26] Master Diagonal Barrier: the NEMS barrier, Gödel incompleteness, Kleene's
     recursion theorem, and Löb's theorem are all instances of one diagonal construction. -/
-abbrev MasterDiagonalBarrier := @SelfReference.master_diagonal_barrier
+abbrev MasterDiagonalBarrier := @SelfReference.Consequences.no_total_decider
 
 /-- [P53] Syntax cannot exhaust semantics: no purely syntactic structure can
     exhaustively capture realized semantic truth. -/
@@ -41,7 +42,8 @@ abbrev RepresentationalIncompletenessSummit :=
 /-- [RP-RFO] Reflective Fold Obstruction: if predicate I is preserved by every
     primitive internal step, it is preserved by all internal closure. A fold
     (architectural transition) is not an iterate. -/
-abbrev FoldIsNotAnIterate := @ReflectiveFoldObstruction.fold_obstruction
+abbrev FoldIsNotAnIterate :=
+  @ReflectiveFoldObstruction.Obstruction.ReflectiveFold.reflective_architecture_fold_obstruction
 
 /-- [RP-RFO, SPEC_020] Turing-completeness does not imply semantic-type completeness.
     A system may be Turing-complete and still be permanently type-bounded: its
@@ -61,7 +63,7 @@ abbrev SimulationIsNotRealization :=
     type cannot iterate to a non-total-effective type. Applied to awareness: simulating
     awareness does not realize the awareness-locus semantic type. -/
 abbrev AdjudicationTypeObstruction :=
-  @ReflectiveFoldObstruction.SemanticType.adjudication_semantic_obstruction
+  @ReflectiveFoldObstruction.SemanticType.Instances.AdjudicationType.adjudication_semantic_obstruction
 
 -- ============================================================
 -- §6–7 — Why there is something rather than nothing
@@ -96,14 +98,14 @@ abbrev AlphaExists := @Alpha.alpha_theorem
 -- ============================================================
 
 /-- [P64] Grounded Existence: whatever exists is Alpha-grounded. -/
-abbrev WhateverExistsIsAlphaGrounded := @GroundedExistence.grounded_existence
+abbrev WhateverExistsIsAlphaGrounded := @GroundedExistence.grounded_existence_thm
 
 /-- [P64] Alpha is not null: a null ground cannot ground actuality. -/
 abbrev AlphaIsNotNull := @GroundedExistence.alpha_not_null
 
 /-- [P64] Alpha is primordial: it is not grounded by any same-level other
     and is the terminus of same-level grounding demands. -/
-abbrev AlphaIsPrimordial := @GroundedExistence.alpha_is_primordial
+abbrev AlphaIsPrimordial := @GroundedExistence.alpha_primordial
 
 /-- [P64] Alpha is not temporalized: it is not situated as one event among events. -/
 abbrev AlphaIsNotTemporalized := @GroundedExistence.alpha_not_temporalized
@@ -114,7 +116,7 @@ abbrev AlphaIsNotMereInfinity := @GroundedExistence.alpha_not_mere_infinity
 
 /-- [P68] Alpha is object-empty but non-null, non-sterile, non-inert.
     The nihilistic interpretation of Alpha is blocked. -/
-abbrev AlphaIsNonNull := @AlphaNonNull.alpha_not_null_thm
+abbrev AlphaIsNonNull := @AlphaNonNull.object_empty_and_not_null
 
 -- ============================================================
 -- §12 — The Reflexive Closure Theorem
@@ -132,7 +134,8 @@ abbrev ClosureWithoutCollapse := @ReflexiveClosure.closure_without_collapse
 /-- [P56] Minimal ternary closure form: binary reflexive closure is insufficient;
     ternary (self-return, partial self-articulation, irreducible reflexive distance)
     is both sufficient and minimal for stable non-collapsing closure. -/
-abbrev MinimalTernaryClosureForm := @ReflexiveClosure.minimal_ternary_closure_form
+abbrev MinimalTernaryClosureForm :=
+  @ReflexiveClosure.noncollapsing_reflexive_closure_minimally_ternary
 
 -- ============================================================
 -- §13 — The Reflexive Unfolding Theorem: why there is change
@@ -144,11 +147,11 @@ abbrev ChangeIsStructurallyNecessary := @ReflexiveUnfolding.no_terminal_reflexiv
 
 /-- [P57] No null origin: absolute origin-from-nothing cannot be an admissible
     boundary condition for reflexive unfolding. -/
-abbrev NoNullOrigin := @ReflexiveUnfolding.no_null_origin
+abbrev NoNullOrigin := @ReflexiveUnfolding.articulative_ascent_nonterminal
 
 /-- [P57] No null terminus: absolute end-into-nothing cannot be an admissible
     boundary condition. -/
-abbrev NoNullTerminus := @ReflexiveUnfolding.no_null_terminus
+abbrev NoNullTerminus := @ReflexiveUnfolding.no_terminal_reflexive_completion
 
 -- ============================================================
 -- §14 — The Reflexive Development Law
@@ -158,18 +161,18 @@ abbrev NoNullTerminus := @ReflexiveUnfolding.no_null_terminus
     interfaces (representational, closure, semantic), no true anchored internal
     completion package exists. -/
 abbrev AnchoredCompletionImpossible :=
-  @ReflexiveArchitectureNonexhaustibilityLean.barriered_anchored_completion_impossible
+  @StructuredNonexhaustibility.barriered_architecture_admits_no_true_honest_anchored_internal_completion
 
 /-- [RP-RAN] Structured Aftermath: completion failure forces a positive residual
     profile — it does not collapse to null. -/
 abbrev CompletionFailureHasStructure :=
-  @ReflexiveArchitectureNonexhaustibilityLean.structured_aftermath
+  @StructuredNonexhaustibility.honest_aftermath_carries_admissible_r4
 
 /-- [RP-RAN] Reflexive Development Law — Standing Trilemma: response to standing
     residual burden is lawfully one of three forms — refinement, proper regime shift,
     or bookkeeping reconfiguration. These exhaust structural alternatives. -/
 abbrev ReflexiveDevelopmentLaw :=
-  @ReflexiveArchitectureNonexhaustibilityLean.reflexive_development_law_standing_trilemma
+  @StructuredNonexhaustibility.reflexive_development_law_standing_trilemma
 
 -- ============================================================
 -- §17 — Intelligence: not random, not robotic
@@ -212,7 +215,7 @@ abbrev NoFinalSelfTheory := @SemanticSelfDescription.no_final_self_theory
 
 /-- [P54] No self-exhausting observer: in a diagonally capable reflexive system,
     no observer can internally exhaust itself as a complete semantic object. -/
-abbrev ObserverCannotSelfExhaust := @ReflexiveClosure.no_self_exhausting_observer
+abbrev ObserverCannotSelfExhaust := @SemanticSelfReference.no_self_exhausting_observer
 
 /-- [RP-ONE] Observer Non-Exhaustibility Summit: observerhood is not exhaustible
     by parametric self-modeling (Route A), internal closure (Route B), or total
@@ -228,7 +231,7 @@ abbrev ObserverNonExhaustibilitySummit :=
 /-- [P55, Thm 55.5] Known Qualia Ledger Theorem: known qualia must appear in the
     ledger as irreducible semantic content rather than purely syntactic structure. -/
 abbrev KnownQualiaAreIrreducibleSemanticContent :=
-  @QualiaLedger.known_qualia_ledger_theorem
+  @QualiaLedger.known_qualia_on_ledger
 
 /-- [P55, Cor 55.6] Hard Problem Category Error: the hard problem, construed as
     demanding that syntax alone generate qualia from outside the semantic ledger,
@@ -250,29 +253,30 @@ abbrev QualiaAreAlphaManifestations :=
 
 /-- [P66] Non-Collapse: there exist Alpha-grounded entities that are not
     Alpha-manifestations. Not everything real is phenomenally present. -/
-abbrev NotEverythingRealIsPhenomenal := @GroundManifestation.non_collapse
+abbrev NotEverythingRealIsPhenomenal :=
+  @GroundManifestation.exists_alpha_grounded_not_manifestation
 
 /-- [P67] Awareness as Locus: Alpha-manifestation implies presence at an
     awareness-locus. The site of phenomenal presence is not object-level content. -/
 abbrev AwarenessIsALocus :=
-  @AwarenessGround.manifestation_implies_presence
+  @AwarenessGround.manifestation_implies_presence_at_locus
 
 /-- [P67] Existence of an awareness-locus that is a locus of Alpha-presence. -/
-abbrev AwarenessLocusExists := @AwarenessGround.existence_locus
+abbrev AwarenessLocusExists := @AwarenessGround.exists_awareness_locus_of_alpha_presence
 
 /-- [P67] An awareness-locus is not object-level content: you cannot find
     awareness by looking for it as one more thing in the world. -/
 abbrev ConsciousnessIsNotAnObject :=
-  @AwarenessGround.awareness_not_object_level
+  @AwarenessGround.awareness_locus_not_object_level_content
 
 /-- [P67] Category error theorem: the source of consciousness is category-mislocated
     when sought as a same-level worldly object. -/
 abbrev SearchingForConsciousnessInBrainIsACategoryError :=
-  @AwarenessGround.category_error_for_object_search
+  @AwarenessGround.awareness_locus_not_object_level_content
 
 /-- [P67] Realized awareness-locus is intrinsically self-illuminating:
     awareness-of-awareness does not require a second same-level observer. -/
-abbrev AwarenessIsSelfIlluminating := @AwarenessGround.self_illuminating
+abbrev AwarenessIsSelfIlluminating := @AwarenessGround.awareness_locus_self_illuminating
 
 -- ============================================================
 -- §27–30 — Geometry of what is left behind
@@ -282,31 +286,31 @@ abbrev AwarenessIsSelfIlluminating := @AwarenessGround.self_illuminating
     canonical certification does not exhaust realization. Structured residue persists
     in fibers above the certification level. -/
 abbrev CertificationDoesNotExhaustRealization :=
-  @InfinityCompression.reflective_non_exhaustion
+  @InfinityCompression.GeneralMethod.Summit.reflective_non_exhaustion_existential
 
 /-- [RP-RA] Universal Forgetting Theorem: for any function π : Real → Bare between
     any types, the residual kernel has complete geometric structure — fibers are
     complete indistinguishability cliques, with kernel-observable duality and
     determinate resolution complexity. -/
 abbrev UniversalForgettingTheorem :=
-  @ReflexiveArchitecture.universal_forgetting_theorem
+  @ReflexiveArchitecture.Universal.Residual.universal_fundamental_equivalence
 
 /-- [RP-RA] Classification Theorem (five-way equivalence): a map is non-exhaustive
     iff non-injective iff has fiber automorphism iff has witness diversity
     iff has nontrivial kernel. All-or-nothing dichotomy. -/
 abbrev ResidualGeometryClassification :=
-  @ReflexiveArchitecture.classification_theorem
+  @ReflexiveArchitecture.Universal.Residual.predicate_classification
 
 /-- [RP-RA] Non-Erasure Principle: representation does not erase the represented.
     NEMS semantic remainder iff IC enriched irreducibility (biconditional). -/
 abbrev RepresentationDoesNotEraseTheRepresented :=
-  @ReflexiveArchitecture.unified_non_erasure_law
+  @ReflexiveArchitecture.Bridge.universal_nonerasure_law
 
 /-- [RP-AA] Unification Theorem: all routes to outer admissibility collapse to
     one gate. Three-level certificate structure (outer gate, functorial second layer,
     irreducible residual) is forced, not chosen. -/
 abbrev AdmissibilityUnificationTheorem :=
-  @AdequacyArchitecture.unification_theorem
+  @AdequacyArchitecture.Instances.program1FiniteGAdm_iff_program1AdmissibilityPullbackDisplayWitness
 
 -- ============================================================
 -- §37 — The Golden Bridge: three coordinated aspects
@@ -314,12 +318,12 @@ abbrev AdmissibilityUnificationTheorem :=
 
 /-- [P69] Three-Aspect Coordination: ground, articulation, and manifestation-in-awareness
     are three coordinated aspects of one structured ontological fact. -/
-abbrev ThreeAspectCoordination := @UnifiedPresence.three_aspect_synthesis
+abbrev ThreeAspectCoordination := @UnifiedPresence.unified_three_aspects
 
 /-- [P70] The Golden Bridge: Ground, Articulation, and Manifestation-in-Awareness
     are coordinated irreducible aspects of one primordial ontological fact.
     The crown result of the philosophical arc. -/
-abbrev TheGoldenBridge := @GoldenBridge.golden_bridge_theorem
+abbrev TheGoldenBridge := @GoldenBridge.golden_bridge
 
 -- ============================================================
 -- §46 — Meta-theorem: what this package proves

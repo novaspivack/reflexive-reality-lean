@@ -1,5 +1,11 @@
 -- AIAgents.lean — Formally Verified Claims for the AI/Agents Portal (Paper 89)
 import ReflexiveReality
+import Learning
+import SelfImprovement
+import SelfAwareness
+import EpistemicAgency
+import InstitutionalEpistemics
+import AdmissibleContinuation
 
 namespace AIAgents
 
@@ -17,7 +23,7 @@ abbrev NoFinalSelfTheory := @SemanticSelfDescription.no_final_self_theory
 
 /-- [P54] No self-exhausting observer: no reflexive observer can internally exhaust
     itself as a complete semantic object. -/
-abbrev ObserverCannotSelfExhaust := @ReflexiveClosure.no_self_exhausting_observer
+abbrev ObserverCannotSelfExhaust := @SemanticSelfReference.no_self_exhausting_observer
 
 /-- [P32] No total self-upgrade certifier: no diagonal-capable agent admits a total
     internal self-upgrade certifier. -/
@@ -30,7 +36,7 @@ abbrev DiversityNecessaryForImprovement := @EpistemicAgency.diversity_necessary
 
 /-- [P33, C2] No total certifier for nontrivial extensional self-claims. -/
 abbrev SelfAwarenessHierarchyBarrier :=
-  @SelfAwareness.Theorems.Hierarchy.no_total_certifier_C2
+  @SelfAwareness.no_total_certifier_C2
 
 /-- [RP-RI] Representational Incompleteness: scaling a self-model cannot eliminate
     the structural blind spot. No arithmetic or computability assumption required. -/
@@ -44,7 +50,7 @@ abbrev ScalingDoesNotFixSelfModelBlindSpot :=
 /-- [P17] Necessary Adjudicators: any PSC universe with stable records and
     distributed context reconciliation must contain adjudicator nodes. If rich
     enough to host self-reference, such nodes develop RSMC. -/
-abbrev NecessaryAdjudicators := @NemS.necessary_adjudicators
+abbrev NecessaryAdjudicators := @NemS.Observers.necessary_adjudicators
 
 /-- [P59] No intelligence without frontier: nontrivial intelligence requires a
     live semantic frontier. Terminal reflexive completion implies no intelligence. -/
@@ -58,12 +64,12 @@ abbrev NoIntelligenceWithoutFrontier :=
 /-- [P19] Execution Necessity: no total-effective static algorithm can perfectly
     emulate a universe's internal adjudication. Block-universe AI is ruled out
     as a model of genuine agency. -/
-abbrev ExecutionNecessity := @NemS.execution_necessity
+abbrev ExecutionNecessity := @NemS.Adjudication.execution_necessity
 
 /-- [P22] Irreducible Agency: the combined synthesis — in a PSC system with
     universal computation, the adjudicator network cannot be a total computable
     function. -/
-abbrev IrreducibleAgency := @NemS.no_emulation
+abbrev IrreducibleAgency := @NemS.Adjudication.irreducible_agency
 
 /-- [P40] No universal final judge: no institution can be simultaneously total,
     sound, and complete on nontrivial claim families under diagonal constraints. -/
@@ -93,7 +99,7 @@ abbrev CertificationLogicSoundness := @CertificationLogic.soundness
 
 /-- [P23] No external runner: any external simulator of a self-contained universe
     either violates PSC, is redundant, or is isomorphic. -/
-abbrev NoExternalRunner := @NemS.foundational_finality
+abbrev NoExternalRunner := @NemS.Reflexive.ReflexiveTheorySpace.foundational_finality
 
 -- ============================================================
 -- Part VI — Semantic Type Obstruction applied to AI [RP-RFO, SPEC_020]
@@ -108,12 +114,12 @@ abbrev SemanticTypeObstructionForAI :=
 /-- [RP-RFO, SPEC_020] Self-modeling depth obstruction: a depth-n self-model
     cannot iterate to depth n+1. Scaling the self-model does not close the gap. -/
 abbrev SelfModelDepthObstruction :=
-  @ReflectiveFoldObstruction.SemanticType.selfModelDepth_obstruction
+  @ReflectiveFoldObstruction.SemanticType.Instances.SelfModelDepth.selfModelDepth_obstruction
 
 /-- [RP-RFO, SPEC_020] Adjudication type obstruction: total-effective adjudication
     cannot iterate to non-total-effective adjudication. -/
 abbrev AdjudicationTypeObstruction :=
-  @ReflectiveFoldObstruction.SemanticType.adjudication_semantic_obstruction
+  @ReflectiveFoldObstruction.SemanticType.Instances.AdjudicationType.adjudication_semantic_obstruction
 
 /-- [RP-RFO, SPEC_020] Simulation is not realization: a Turing-complete AI system
     can simulate a deeper-type system without instantiating that type. The iff
@@ -134,7 +140,7 @@ abbrev TypeGapPullsBackAlongSimulation :=
     diagonal capability, a lawful non-total-effective adjudicator is forced.
     Total-effective algorithms at choice points suffice only for algorithmic systems. -/
 abbrev TransputationForcedAtChoicePoints :=
-  @Transputation.closed_choice_forces_transputation
+  @Transputation.Theorems.closed_choice_forces_transputation
 
 -- ============================================================
 -- Part VIII — Consciousness and Sentience [P55, P67, P73, RP-ONE, RP-RFO]
@@ -148,7 +154,7 @@ abbrev HardProblemDissolvedTheorem :=
 /-- [P67] Awareness is not an object: the awareness-locus is not object-level
     content. Simulating awareness does not realize the awareness-locus type. -/
 abbrev ConsciousnessIsNotAnObject :=
-  @AwarenessGround.awareness_not_object_level
+  @AwarenessGround.awareness_locus_not_object_level_content
 
 /-- [RP-ONE] Observer Non-Exhaustibility: observerhood is not exhaustible by
     parametric self-modeling, internal closure, or total certification.
@@ -174,11 +180,11 @@ abbrev ClosureCompatibleContinuation :=
     A proper regime shift (fold) cannot be reached by scaling within the current
     architecture. -/
 abbrev ReflexiveDevelopmentLawForAI :=
-  @ReflexiveArchitectureNonexhaustibilityLean.reflexive_development_law_standing_trilemma
+  @StructuredNonexhaustibility.reflexive_development_law_standing_trilemma
 
 /-- [RP-RAN] Barriered anchored completion impossible: no system can achieve full
     internal self-exhaustion under the three barrier interfaces. -/
 abbrev AnchoredCompletionImpossible :=
-  @ReflexiveArchitectureNonexhaustibilityLean.barriered_anchored_completion_impossible
+  @StructuredNonexhaustibility.barriered_architecture_admits_no_true_honest_anchored_internal_completion
 
 end AIAgents
