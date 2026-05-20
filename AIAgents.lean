@@ -9,32 +9,32 @@ namespace AIAgents
 
 /-- [P30] No total internal self-certifier: no diagonal-capable system admits a
     total internal self-certifier for any nontrivial extensional claim. -/
-theorem NoTotalInternalSelfCertifier := @Learning.no_total_self_certifier
+abbrev NoTotalInternalSelfCertifier := @Learning.no_total_self_certifier
 
 /-- [P51] No final self-theory: no diagonal-capable system can internally contain
     a total and exact theory of its own realized semantics. -/
-theorem NoFinalSelfTheory := @SemanticSelfDescription.no_final_self_theory
+abbrev NoFinalSelfTheory := @SemanticSelfDescription.no_final_self_theory
 
 /-- [P54] No self-exhausting observer: no reflexive observer can internally exhaust
     itself as a complete semantic object. -/
-theorem ObserverCannotSelfExhaust := @ReflexiveClosure.no_self_exhausting_observer
+abbrev ObserverCannotSelfExhaust := @ReflexiveClosure.no_self_exhausting_observer
 
 /-- [P32] No total self-upgrade certifier: no diagonal-capable agent admits a total
     internal self-upgrade certifier. -/
-theorem NoTotalSelfUpgradeCertifier :=
+abbrev NoTotalSelfUpgradeCertifier :=
   @SelfImprovement.no_total_upgrade_certifier
 
 /-- [P31] Diversity necessary for strict improvement: homogeneous verification
     societies cannot strictly improve certified coverage under admissible protocols. -/
-theorem DiversityNecessaryForImprovement := @EpistemicAgency.diversity_necessary
+abbrev DiversityNecessaryForImprovement := @EpistemicAgency.diversity_necessary
 
 /-- [P33, C2] No total certifier for nontrivial extensional self-claims. -/
-theorem SelfAwarenessHierarchyBarrier :=
+abbrev SelfAwarenessHierarchyBarrier :=
   @SelfAwareness.Theorems.Hierarchy.no_total_certifier_C2
 
 /-- [RP-RI] Representational Incompleteness: scaling a self-model cannot eliminate
     the structural blind spot. No arithmetic or computability assumption required. -/
-theorem ScalingDoesNotFixSelfModelBlindSpot :=
+abbrev ScalingDoesNotFixSelfModelBlindSpot :=
   @RepresentationalIncompleteness.representational_incompleteness
 
 -- ============================================================
@@ -44,11 +44,11 @@ theorem ScalingDoesNotFixSelfModelBlindSpot :=
 /-- [P17] Necessary Adjudicators: any PSC universe with stable records and
     distributed context reconciliation must contain adjudicator nodes. If rich
     enough to host self-reference, such nodes develop RSMC. -/
-theorem NecessaryAdjudicators := @NemS.necessary_adjudicators
+abbrev NecessaryAdjudicators := @NemS.necessary_adjudicators
 
 /-- [P59] No intelligence without frontier: nontrivial intelligence requires a
     live semantic frontier. Terminal reflexive completion implies no intelligence. -/
-theorem NoIntelligenceWithoutFrontier :=
+abbrev NoIntelligenceWithoutFrontier :=
   @CalculusOfIntelligence.no_intelligence_without_frontier
 
 -- ============================================================
@@ -58,21 +58,21 @@ theorem NoIntelligenceWithoutFrontier :=
 /-- [P19] Execution Necessity: no total-effective static algorithm can perfectly
     emulate a universe's internal adjudication. Block-universe AI is ruled out
     as a model of genuine agency. -/
-theorem ExecutionNecessity := @NemS.execution_necessity
+abbrev ExecutionNecessity := @NemS.execution_necessity
 
 /-- [P22] Irreducible Agency: the combined synthesis — in a PSC system with
     universal computation, the adjudicator network cannot be a total computable
     function. -/
-theorem IrreducibleAgency := @NemS.no_emulation
+abbrev IrreducibleAgency := @NemS.no_emulation
 
 /-- [P40] No universal final judge: no institution can be simultaneously total,
     sound, and complete on nontrivial claim families under diagonal constraints. -/
-theorem NoUniversalFinalJudge :=
+abbrev NoUniversalFinalJudge :=
   @InstitutionalEpistemics.no_universal_final_judge
 
 /-- [P40] K-role lower bound: any protocol achieving full certified coverage under
     a k-way partition requires at least k distinct roles. -/
-theorem KRoleLowerBound := @InstitutionalEpistemics.k_role_lower_bound
+abbrev KRoleLowerBound := @InstitutionalEpistemics.k_role_lower_bound
 
 -- ============================================================
 -- Part IV — Multi-Agent Systems and Institutions [P31, P50]
@@ -80,12 +80,12 @@ theorem KRoleLowerBound := @InstitutionalEpistemics.k_role_lower_bound
 
 /-- [P31] Protocol strict improvement: societies with admissible protocols can
     achieve strictly larger certified coverage than any individual verifier. -/
-theorem SocietyStrictImprovement :=
+abbrev SocietyStrictImprovement :=
   @EpistemicAgency.protocol_strict_improvement
 
 /-- [P50] Soundness of the stratified certification calculus: every derivation
     yields a protocol witness. -/
-theorem CertificationLogicSoundness := @CertificationLogic.soundness
+abbrev CertificationLogicSoundness := @CertificationLogic.soundness
 
 -- ============================================================
 -- Part V — Simulation Hypothesis Closed [P19, P23, RP-RI]
@@ -93,7 +93,7 @@ theorem CertificationLogicSoundness := @CertificationLogic.soundness
 
 /-- [P23] No external runner: any external simulator of a self-contained universe
     either violates PSC, is redundant, or is isomorphic. -/
-theorem NoExternalRunner := @NemS.foundational_finality
+abbrev NoExternalRunner := @NemS.foundational_finality
 
 -- ============================================================
 -- Part VI — Semantic Type Obstruction applied to AI [RP-RFO, SPEC_020]
@@ -102,28 +102,28 @@ theorem NoExternalRunner := @NemS.foundational_finality
 /-- [RP-RFO, SPEC_020] Scaling cannot change what kind of system you are:
     the type-reachability preorder is nontrivial. Turing-completeness does not
     imply semantic-type completeness. -/
-theorem SemanticTypeObstructionForAI :=
+abbrev SemanticTypeObstructionForAI :=
   @ReflectiveFoldObstruction.SemanticType.semanticType_preorder_nontrivial
 
 /-- [RP-RFO, SPEC_020] Self-modeling depth obstruction: a depth-n self-model
     cannot iterate to depth n+1. Scaling the self-model does not close the gap. -/
-theorem SelfModelDepthObstruction :=
+abbrev SelfModelDepthObstruction :=
   @ReflectiveFoldObstruction.SemanticType.selfModelDepth_obstruction
 
 /-- [RP-RFO, SPEC_020] Adjudication type obstruction: total-effective adjudication
     cannot iterate to non-total-effective adjudication. -/
-theorem AdjudicationTypeObstruction :=
+abbrev AdjudicationTypeObstruction :=
   @ReflectiveFoldObstruction.SemanticType.adjudication_semantic_obstruction
 
 /-- [RP-RFO, SPEC_020] Simulation is not realization: a Turing-complete AI system
     can simulate a deeper-type system without instantiating that type. The iff
     under the section criterion is the formal split. -/
-theorem SimulationIsNotRealization :=
+abbrev SimulationIsNotRealization :=
   @ReflectiveFoldObstruction.SemanticType.typeReachable_pullback_iff_of_section
 
 /-- [RP-RFO, SPEC_020] Type gap pulls back along simulation: if the simulated
     system has a type gap, the simulating system inherits it. -/
-theorem TypeGapPullsBackAlongSimulation :=
+abbrev TypeGapPullsBackAlongSimulation :=
   @ReflectiveFoldObstruction.SemanticType.typeGap_simulation_pullback
 
 -- ============================================================
@@ -133,7 +133,7 @@ theorem TypeGapPullsBackAlongSimulation :=
 /-- [P76] Transputation forced: under closure, record-divergent choice, and
     diagonal capability, a lawful non-total-effective adjudicator is forced.
     Total-effective algorithms at choice points suffice only for algorithmic systems. -/
-theorem TransputationForcedAtChoicePoints :=
+abbrev TransputationForcedAtChoicePoints :=
   @Transputation.closed_choice_forces_transputation
 
 -- ============================================================
@@ -142,18 +142,18 @@ theorem TransputationForcedAtChoicePoints :=
 
 /-- [P55] Hard problem dissolved: the demand that pure syntax generate qualia
     from outside the semantic ledger is a category mistake. -/
-theorem HardProblemDissolvedTheorem :=
+abbrev HardProblemDissolvedTheorem :=
   @QualiaLedger.hard_problem_category_error
 
 /-- [P67] Awareness is not an object: the awareness-locus is not object-level
     content. Simulating awareness does not realize the awareness-locus type. -/
-theorem ConsciousnessIsNotAnObject :=
+abbrev ConsciousnessIsNotAnObject :=
   @AwarenessGround.awareness_not_object_level
 
 /-- [RP-ONE] Observer Non-Exhaustibility: observerhood is not exhaustible by
     parametric self-modeling, internal closure, or total certification.
     Route D is the unique admissible observer architecture. -/
-theorem ObserverNonExhaustibilitySummit :=
+abbrev ObserverNonExhaustibilitySummit :=
   @Observer.Nonexhaustability.observer_non_exhaustibility_summit
 
 -- ============================================================
@@ -162,7 +162,7 @@ theorem ObserverNonExhaustibilitySummit :=
 
 /-- [P85] Closure-Compatible Continuation: ClosureCompatible ∧ BurdenBearing
     implies AdmissibleContinuation. Design criterion for long-term viable AI. -/
-theorem ClosureCompatibleContinuation :=
+abbrev ClosureCompatibleContinuation :=
   @AdmissibleContinuation.closure_compatible_continuation
 
 -- ============================================================
@@ -173,12 +173,12 @@ theorem ClosureCompatibleContinuation :=
     requires exactly one of refinement, proper regime shift, or reconfiguration.
     A proper regime shift (fold) cannot be reached by scaling within the current
     architecture. -/
-theorem ReflexiveDevelopmentLawForAI :=
+abbrev ReflexiveDevelopmentLawForAI :=
   @ReflexiveArchitectureNonexhaustibilityLean.reflexive_development_law_standing_trilemma
 
 /-- [RP-RAN] Barriered anchored completion impossible: no system can achieve full
     internal self-exhaustion under the three barrier interfaces. -/
-theorem AnchoredCompletionImpossible :=
+abbrev AnchoredCompletionImpossible :=
   @ReflexiveArchitectureNonexhaustibilityLean.barriered_anchored_completion_impossible
 
 end AIAgents
