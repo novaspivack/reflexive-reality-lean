@@ -40,9 +40,8 @@ lake build            -- verify all theorems (compiles ~750 files beyond Mathlib
 
 ## Dependencies
 
-All dependencies are pinned to specific commit hashes so the build is
-reproducible. Three repos (RI, ONE, RAN) use local paths pending their
-public GitHub push — see comments below.
+All dependencies are pinned to specific commit hashes (git remotes) so the build is
+reproducible on a clean clone without sibling checkout layout.
 
 ## Toolchain
 All libraries unified on leanprover/lean4:v4.29.0-rc6
@@ -84,6 +83,23 @@ require «nems-lean» from git
   "https://github.com/novaspivack/nems-lean.git"
   @ "main"
 
+/-- Same checkout as `«nems-lean»` for reflexive-architecture's underscore alias. -/
+
+require nems_lean from git
+  "https://github.com/novaspivack/nems-lean.git"
+  @ "main"
+
+/-! ### Transputation — Papers 76–77 (forced adjudication at choice points) -/
+
+/--
+  transputation-lean: formal theory of transputation; DSAC realization.
+  Explicit pin (same alias as ugp-lean) so Physics/AIAgents portal imports resolve
+  without duplicate package checkout.
+-/
+require «transputation» from git
+  "https://github.com/novaspivack/transputation-lean.git"
+  @ "main"
+
 /-! ### UGP — Universal Generative Principle (Paper 25 + physics derivations) -/
 
 /--
@@ -116,6 +132,26 @@ require «reflexive-closure-lean» from git
 -/
 require «viable-continuation-lean» from git
   "https://github.com/novaspivack/viable-continuation-lean.git"
+  @ "main"
+
+/-! ### Sentience — Paper 73 (SIAM) -/
+
+/--
+  sentience-lean: Self-Indexing Adjudicative Manifold; seven structural invariants;
+  separation theorems; summit bridge to viable continuation.
+-/
+require «sentience-lean» from git
+  "https://github.com/novaspivack/sentience-lean.git"
+  @ "main"
+
+/-! ### Phenomenology — Papers 74–75 -/
+
+/--
+  phenomenology-lean: six-part phenomenology ontology; admissibility; survivor /
+  uniqueness theorem for the Paper 74 framework.
+-/
+require «phenomenology-lean» from git
+  "https://github.com/novaspivack/phenomenology-lean.git"
   @ "main"
 
 /-! ### Infinity Compression — Reflective Non-Exhaustion Summit -/
@@ -224,3 +260,27 @@ lean_lib «ReflexiveReality» where
 -/
 lean_lib «Philosophy» where
   roots := #[`Philosophy]
+
+/--
+  FormalTheory: named formal-theory theorem aliases (Paper 87).
+-/
+lean_lib «FormalTheory» where
+  roots := #[`FormalTheory]
+
+/--
+  Physics: named physics theorem aliases (Paper 88).
+-/
+lean_lib «Physics» where
+  roots := #[`Physics]
+
+/--
+  AIAgents: named AI/agents theorem aliases (Paper 89).
+-/
+lean_lib «AIAgents» where
+  roots := #[`AIAgents]
+
+/--
+  ConsciousnessMind: named consciousness/mind theorem aliases (Paper 92).
+-/
+lean_lib «ConsciousnessMind» where
+  roots := #[`ConsciousnessMind]

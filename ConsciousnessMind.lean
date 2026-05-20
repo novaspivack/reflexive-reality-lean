@@ -1,48 +1,4 @@
-/-!
-# ConsciousnessMind.lean — Formally Verified Claims in the Theory of Mind Portal
-
-This file provides named aliases for the key theorems underlying each major
-claim in Paper C5 ("Consciousness, Phenomenology, and Mind", Paper 92 of the
-Reflexive Reality suite, Nova Spivack, 2026).
-
-Every `theorem` or `def` below is either:
-- a direct alias for an existing proved theorem in one of the component libraries, or
-- a brief composition of such theorems
-
-**Zero sorry. Zero admit.**
-
-Running `lake build ConsciousnessMind` machine-verifies that every claim
-in Paper C5 marked with a citation has a corresponding formal proof.
-
-## How to verify a specific claim
-
-```lean
-#check ConsciousnessMind.KnownQualiaOnLedger
-#check ConsciousnessMind.HardProblemDissolvedTheorem
-#check ConsciousnessMind.AwarenessIsNotAnObject
--- etc.
-```
-
-Or run `lake build ConsciousnessMind` to verify the entire portal.
-
-## Source papers
-
-- [P55] Qualia and the Semantic Ledger: QualiaLedger library (reflexive-closure-lean)
-- [P65] Qualia as Alpha-Grounded Semantic Content: QualiaAlphaGrounded library
-- [P66] Phenomenal Presence and Ground-Manifestation: GroundManifestation library
-- [P67] Awareness as the Locus of Ground-Presence: AwarenessGround library
-- [P68] Alpha Is Not Null: AlphaNonNull library
-- [P69] Reality, Existence, and Awareness: UnifiedPresence library
-- [P70] The Golden Bridge: GoldenBridge library
-- [P51] No Final Self-Theory: SemanticSelfDescription library (nems-lean)
-- [P54] Observer Non-Self-Exhaustion: ReflexiveClosure library (reflexive-closure-lean)
-- [P56] Reflexive Closure Theorem: ReflexiveClosure library
-- [RP-RI] Representational Incompleteness: RepresentationalIncompleteness library
-- [RP-RFO] Reflective Fold Obstruction: ReflectiveFoldObstruction library
-- [RP-ONE] Observer Non-Exhaustibility: Observer.Nonexhaustability library
-
--/
-
+-- ConsciousnessMind.lean — Formally Verified Claims in the Theory of Mind Portal (Paper 92)
 import ReflexiveReality
 
 namespace ConsciousnessMind
@@ -197,5 +153,26 @@ theorem SimulationIsNotRealization :=
     architecture. -/
 theorem ObserverNonExhaustibilitySummit :=
   @Observer.Nonexhaustability.observer_non_exhaustibility_summit
+
+-- ============================================================
+-- Part IX — Sentience / SIAM [P73]
+-- ============================================================
+
+/-- [P73] Feedforward controllers cannot satisfy OSIAM: absence of recursive
+    self-update witness is structurally incompatible with operational sentience. -/
+theorem FeedforwardDoesNotImplyOSIAM {F : NemS.Framework} (σ : Sentience.Core.ProcessWindow F)
+    (h : Sentience.Classification.IsFeedforward σ) : ¬ Sentience.Core.OSIAM σ :=
+  Sentience.Classification.feedforward_not_OSIAM σ h
+
+-- ============================================================
+-- Part X — Phenomenology survivor / uniqueness [P74, P75]
+-- ============================================================
+
+/-- [P74, P75] Survivor theorem: every admissible theory candidate is equivalent
+    to the Paper 74 six-part phenomenology framework. -/
+theorem PhenomenologySurvivorTheorem (c : Phenomenology.Meta.TheoryCandidate)
+    (hAdm : Phenomenology.Meta.Admissible c) (hSurv : Phenomenology.Meta.Survives c) :
+    Phenomenology.Meta.Equiv c Phenomenology.Meta.paper74AsCandidate :=
+  Phenomenology.Meta.survivor_theorem c hAdm hSurv
 
 end ConsciousnessMind

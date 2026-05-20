@@ -1,29 +1,4 @@
-/-!
-# FormalTheory.lean — Formally Verified Claims for the Formal Theory Portal
-
-This file provides named aliases for the key theorems underlying each major
-claim in Paper C2 ("Reflexive Reality: A Survey for Formal Theory Specialists",
-Paper 87 of the Reflexive Reality suite, Nova Spivack, 2026).
-
-Every `theorem` below is a direct alias for an existing proved theorem in one of
-the component libraries.
-
-**Zero sorry. Zero admit.**
-
-Running `lake build FormalTheory` machine-verifies every claim in Paper C2
-marked with a citation.
-
-## How to verify a specific claim
-
-```lean
-#check FormalTheory.MasterDiagonalBarrier
-#check FormalTheory.PhysicalIncompleteness
-#check FormalTheory.RepresentationalIncompletenessSummit
--- etc.
-```
-
--/
-
+-- FormalTheory.lean — Formally Verified Claims for the Formal Theory Portal (Paper 87)
 import ReflexiveReality
 
 namespace FormalTheory

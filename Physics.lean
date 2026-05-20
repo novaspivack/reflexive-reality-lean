@@ -1,29 +1,4 @@
-/-!
-# Physics.lean — Formally Verified Claims for the Physics Portal
-
-This file provides named aliases for the key theorems underlying each major
-claim in Paper C3 ("Reflexive Reality: A Survey for Physicists", Paper 88 of the
-Reflexive Reality suite, Nova Spivack, 2026).
-
-Every `theorem` below is a direct alias for an existing proved theorem in one of
-the component libraries.
-
-**Zero sorry. Zero admit.**
-
-Running `lake build Physics` machine-verifies every claim in Paper C3 marked
-with a citation.
-
-## How to verify a specific claim
-
-```lean
-#check Physics.PhysicalIncompleteness
-#check Physics.BornRuleAsClosureFixedPoint
-#check Physics.FoundationalViabilityIffClosure
--- etc.
-```
-
--/
-
+-- Physics.lean — Formally Verified Claims for the Physics Portal (Paper 88)
 import ReflexiveReality
 
 namespace Physics

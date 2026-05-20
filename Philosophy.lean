@@ -1,37 +1,4 @@
-/-!
-# Philosophy.lean — Formally Verified Philosophical Claims
-
-This file provides named aliases for the key theorems underlying each major
-philosophical claim in Paper 86 ("Reflexive Reality: A Philosophical
-Exposition", Paper 86 of the NEMS Suite, Nova Spivack, 2026).
-
-Every `theorem` or `def` below is either:
-- a direct alias for an existing proved theorem in one of the component libraries, or
-- a brief composition of such theorems
-
-**Zero sorry. Zero admit.**
-
-Running `lake build Philosophy` machine-verifies that every philosophical
-claim in Paper 86 marked with a citation has a corresponding formal proof.
-
-## How to verify a specific claim
-
-```lean
-#check Philosophy.WhyThereIsSomethingRatherThanNothing
-#check Philosophy.HardProblemDissolvedTheorem
--- etc.
-```
-
-Or run `lake build Philosophy` to verify the entire philosophical summary.
-
-## Citation convention in Paper 86
-
-Claims in Paper 86 are annotated [Pn] where n is the NEMS paper number,
-or [RP-X] where X is a program abbreviation (RI, RFO, IC, RA, AA, ONE, RAN).
-The theorem names below correspond to those citations.
-
--/
-
+-- Philosophy.lean — Formally Verified Philosophical Claims (Paper 86)
 import ReflexiveReality
 
 namespace Philosophy

@@ -1,29 +1,4 @@
-/-!
-# AIAgents.lean — Formally Verified Claims for the AI/Agents Portal
-
-This file provides named aliases for the key theorems underlying each major
-claim in Paper C4 ("Reflexive Reality: A Survey for AI, Agents, and AGI
-Researchers", Paper 89 of the Reflexive Reality suite, Nova Spivack, 2026).
-
-Every `theorem` below is a direct alias for an existing proved theorem in one of
-the component libraries.
-
-**Zero sorry. Zero admit.**
-
-Running `lake build AIAgents` machine-verifies every claim in Paper C4 marked
-with a citation.
-
-## How to verify a specific claim
-
-```lean
-#check AIAgents.NoTotalInternalSelfCertifier
-#check AIAgents.FeedforwardNotOSIAM
-#check AIAgents.SimulationIsNotRealization
--- etc.
-```
-
--/
-
+-- AIAgents.lean — Formally Verified Claims for the AI/Agents Portal (Paper 89)
 import ReflexiveReality
 
 namespace AIAgents
